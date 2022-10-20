@@ -130,17 +130,14 @@
                         <?php
                         foreach ( $actorData as $actor => $value )
                         {
-                            echo "
-                                <tr>
-                                    <td>
-                                        " . $value['first_name'] . "
-                                    </td>
-                                    <td>
-                                        " . $value['last_name'] . "
-                                    </td>
-                                </tr>
-                            ";
-
+                            echo sprintf(
+                                "<tr>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                </tr>",
+                                $value['first_name'],
+                                $value['last_name']
+                            );
                         }
                         ?>
                     </tbody>
@@ -159,18 +156,16 @@
                         <?php
                         foreach ( $storeData as $store => $value )
                         {
-                            echo "
-                                <tr>
-                                    <td>
-                                        " . $value['country'] . "
-                                    </td>
-                                    <td>
-                                        " . $value['city'] . "
-                                    </td>
-                                    <td>
-                                        " . $value['address'] . "
-                                    </td>
-                                </tr>";
+                            echo sprintf(
+                                "<tr>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                    <td>%s</td>
+                                </tr>",
+                                $value['country'], 
+                                $value['city'], 
+                                $value['address']
+                            );
                         }
                         ?>
                     </tbody>
